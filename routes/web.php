@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\AnggotaController;
 use App\Http\Controllers\HitungController;
 use App\Http\Controllers\TestController;
 use Illuminate\Support\Facades\Route;
@@ -15,20 +16,22 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function() //buat alamat url
-{
-    return view ('welcome'); //nama file di views
-})-> name('home'); 
+// Route::get('/', function() //buat alamat url
+// {
+//     return view ('welcome'); //nama file di views
+// })-> name('home'); 
 
-Route::get('/pendataan', function() {
-    return view ('pendataan');
-})-> name('pendataan');
+// Route::get('/pendataan', function() {
+//     return view ('pendataan');
+// })-> name('pendataan');
 
-Route::get('/pendaftaran', function() {
-    return view ('dashboard');
-})-> name('form');
+// Route::get('/pendaftaran', function() {
+//     return view ('dashboard');
+// })-> name('form');
 
-Route::get('/hitung', [HitungController::class, 'hitung']);
+// Route::get('/hitung', [HitungController::class, 'hitung']);
 
-Route::get('/daftar', [TestController::class, 'daftar']);
-Route::post('/kirim', [TestController::class, 'kirim']);
+// Route::get('/daftar', [TestController::class, 'daftar']);
+// Route::post('/kirim', [TestController::class, 'kirim']);
+
+Route::get('/daftar', [AnggotaController::class, 'index']); // untuk menampilkan tabel anggota
