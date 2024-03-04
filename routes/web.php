@@ -1,6 +1,10 @@
 <?php
 
+<<<<<<< HEAD
 use App\Http\Controllers\DashboardController;
+=======
+use App\Http\Controllers\AnggotaController;
+>>>>>>> d5cdcb94ac8a685c8f92356f5d32e1d849d128dd
 use App\Http\Controllers\HitungController;
 use App\Http\Controllers\TestController;
 use Illuminate\Support\Facades\Route;
@@ -31,7 +35,7 @@ Route::get('/', function() //buat alamat url
 
 // Route::get('/hitung', [HitungController::class, 'hitung']);
 
-// Route::get('/daftar', [TestController::class, 'daftar']);
-// Route::post('/kirim', [TestController::class, 'kirim']);
+Route::get('/daftar', [TestController::class, 'daftar']);
+Route::post('/kirim', [TestController::class, 'kirim']);
 
-Route::get('/dashboard', [DashboardController::class, 'index']);
+Route::get('/daftar', [AnggotaController::class, 'index']); // untuk menampilkan tabel anggota
