@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\AnggotaController;
+use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\HitungController;
 use App\Http\Controllers\TestController;
 use Illuminate\Support\Facades\Route;
@@ -35,3 +36,5 @@ Route::get('/daftar', [TestController::class, 'daftar']);
 Route::post('/kirim', [TestController::class, 'kirim']);
 
 Route::get('/daftar', [AnggotaController::class, 'index']); // untuk menampilkan tabel anggota
+
+Route::get('/dashboard', [DashboardController::class,'index']);
