@@ -1,7 +1,11 @@
 {
     "title": "SB Admin 2",
     "name": "startbootstrap-sb-admin-2",
+<<<<<<< HEAD
     "version": "4.1.4",
+=======
+    "version": "4.1.3",
+>>>>>>> 773b545298c35d15b7c4ff4b6867b9624f5a8990
     "scripts": {
         "start": "node_modules/.bin/gulp watch"
     },

@@ -1,5 +1,6 @@
 <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
 
+<<<<<<< HEAD
 <!-- Sidebar - Brand -->
 <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.html">
     <div class="sidebar-brand-icon rotate-n-15">
@@ -118,5 +119,47 @@
     <p class="text-center mb-2"><strong>SB Admin Pro</strong> is packed with premium features, components, and more!</p>
     <a class="btn btn-success btn-sm" href="https://startbootstrap.com/theme/sb-admin-pro">Upgrade to Pro!</a>
 </div>
+=======
+    <!-- Sidebar - Brand -->
+    <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.html">
+        <div class="sidebar-brand-icon rotate-n-15">
+            <i class="fas fa-laugh-wink"></i>
+        </div>
+        <div class="sidebar-brand-text mx-3">SB Admin <sup>2</sup></div>
+    </a>
+
+    <!-- Divider -->
+    <hr class="sidebar-divider my-0">
+
+    <!-- Nav Item - Dashboard -->
+    <li class="nav-item active">
+        <a class="nav-link" href="/dashboard">
+            <i class="fas fa-fw fa-tachometer-alt"></i>
+            <span>Dashboard</span></a>
+    </li>
+    <li class="nav-item active">
+        <a class="nav-link" href="/anggota">
+            <i class="fas fa-fw fa-tachometer-alt"></i>
+            <span>Anggota</span></a>
+    </li>
+    <li class="nav-item active">
+        <a class="nav-link" href="/buku">
+            <i class="fas fa-fw fa-tachometer-alt"></i>
+            <span>Buku</span></a>
+    </li>
+    <li class="nav-item active">
+        <a class="nav-link" href="/pinjambuku">
+            <i class="fas fa-fw fa-tachometer-alt"></i>
+            <span>Pinjam Buku</span></a>
+    </li>
+    <li class="nav-item active">
+        <a class="nav-link" href="/detailpinjam">
+            <i class="fas fa-fw fa-tachometer-alt"></i>
+            <span>Detail Pinjam</span></a>
+    </li>
+
+
+
+>>>>>>> 773b545298c35d15b7c4ff4b6867b9624f5a8990
 
 </ul>

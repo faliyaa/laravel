@@ -11,7 +11,12 @@
 
     <title>SB Admin 2 - Dashboard</title>
 
+<<<<<<< HEAD
     @include('includes.style')
+=======
+    <!-- Custom fonts for this template-->
+ @include('includes.style')
+>>>>>>> 773b545298c35d15b7c4ff4b6867b9624f5a8990
 
 </head>
 
@@ -21,9 +26,15 @@
     <div id="wrapper">
 
         <!-- Sidebar -->
+<<<<<<< HEAD
        @include('includes.sidebar')
         <!-- End of Sidebar -->
         @yield('content')
+=======
+   @include('includes.sidebar')
+        <!-- End of Sidebar -->
+
+>>>>>>> 773b545298c35d15b7c4ff4b6867b9624f5a8990
         <!-- Content Wrapper -->
         <div id="content-wrapper" class="d-flex flex-column">
 
@@ -31,18 +42,31 @@
             <div id="content">
 
                 <!-- Topbar -->
+<<<<<<< HEAD
                 @include('includes.navbar')
                 <!-- End of Topbar -->
 
                 <!-- Begin Page Content -->
             
+=======
+          @include('includes.navbar')
+                <!-- End of Topbar -->
+
+                <!-- Begin Page Content -->
+         @yield('content')
+         @yield('tabel')
+>>>>>>> 773b545298c35d15b7c4ff4b6867b9624f5a8990
                 <!-- /.container-fluid -->
 
             </div>
             <!-- End of Main Content -->
 
             <!-- Footer -->
+<<<<<<< HEAD
             @include('includes.footer')
+=======
+       @include('includes.footer')
+>>>>>>> 773b545298c35d15b7c4ff4b6867b9624f5a8990
             <!-- End of Footer -->
 
         </div>
@@ -76,8 +100,12 @@
         </div>
     </div>
 
+<<<<<<< HEAD
     <!-- Bootstrap core JavaScript-->
     @include('includes.script')
+=======
+  @include('includes.script')
+>>>>>>> 773b545298c35d15b7c4ff4b6867b9624f5a8990
 
 </body>
 
