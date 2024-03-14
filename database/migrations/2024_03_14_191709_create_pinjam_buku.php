@@ -11,8 +11,13 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('pinjambuku', function (Blueprint $table) {
+        Schema::create('pinjam_buku', function (Blueprint $table) {
             $table->id();
+            $table->unsignedBigInteger('kode_anggota')->references('id')->on('anggota')->onDelete('cascade');
+            $table->string('kode_nuku');
+            $table->string('tgl_pinjam');
+            $table->date('batas_pinjam');
+            $table->date('tahun_terbit');
             $table->timestamps();
         });
     }
@@ -22,6 +27,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('pinjambuku');
+        Schema::dropIfExists('pinjam_buku');
     }
 };

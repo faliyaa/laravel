@@ -11,8 +11,11 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('profile', function (Blueprint $table) {
+        Schema::create('detail_pinjam', function (Blueprint $table) {
             $table->id();
+            $table->unsignedBigInteger('kode_buku')->references('id')->on('buku')->onDelete('cascade');
+            $table->date('tgl_kembali');
+            $table->string('status_pinjam');
             $table->timestamps();
         });
     }
@@ -22,6 +25,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('profile');
+        Schema::dropIfExists('detail_pinjam');
     }
 };

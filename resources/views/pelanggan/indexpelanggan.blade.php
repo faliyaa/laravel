@@ -1,39 +1,35 @@
 @extends('layouts.admin')
 @section('judul', 'Dashboard')
 
-@section('dashboard')
+@section('content')
 
 
-<div class="container">
-    <div class="p-3">
-        <h1>Data Pelanggan</h1>
-        <a href="/tambahpelanggan" class="btn btn-primary mb-3">Tambah Data Pelanggan</a>
-        <table id="example1" class="table table-bordered table-striped">
-            <thead>
-                <tr>
-                    <th scope="col">No</th>
-                    <th scope="col">Nama Lengkap</th>
-                    <th scope="col">No HP</th>
-                    <th scope="col">Alamat</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>1</td>
-                    <td>Budi Santoso</td>
-                    <td>08123456789</td>
-                    <td>Jl. Merdeka No. 12, Semarang</td>
-                </tr>
-                <tr>
-                    <td>2</td>
-                    <td>Ani Lestari</td>
-                    <td>08987654321</td>
-                    <td>Jl. Sudirman No. 17, Semarang</td>
-                </tr>
-            </tbody>
-        </table>
+    <div class="container">
+        <div class="p-3">
+            <h1>Data Pelanggan</h1>
+            <a href="/tambahpelanggan" class="btn btn-primary mb-3">Tambah Data Pelanggan</a>
+            <table id="example1" class="table table-bordered table-striped">
+                <thead>
+                    <tr>
+                        <th scope="col">No</th>
+                        <th scope="col">Nama Lengkap</th>
+                        <th scope="col">No HP</th>
+                        <th scope="col">Alamat</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach ($anggotas as $anggota)
+                        <tr>
+                            <td>{{ $loop->iteration }}</td>
+                            <td>{{ $anggota->nama_anggota }}</td>
+                            <td>{{ $anggota->tgl_lahir }}</td>
+                            <td>{{ $anggota->alamat }}</td>
+                        </tr>
+                    @endforeach
+                </tbody>
+            </table>
+        </div>
     </div>
-</div>
 
 @endsection
 

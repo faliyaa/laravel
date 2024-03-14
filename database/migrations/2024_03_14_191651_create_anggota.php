@@ -11,8 +11,14 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('detailpinjam', function (Blueprint $table) {
+        Schema::create('anggota', function (Blueprint $table) {
             $table->id();
+            $table->string('nama_anggota');
+            $table->string('tempat_lahir');
+            $table->date('tgl_lahir');
+            $table->enum('gender', ['laki laki', 'perempuan']);
+            $table->string('alamat');
+            $table->string('no_telepon');
             $table->timestamps();
         });
     }
@@ -22,6 +28,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('detailpinjam');
+        Schema::dropIfExists('anggota');
     }
 };

@@ -30,11 +30,11 @@
             <div id="content">
 
                 <!-- Topbar -->
-               @include('includes.navbar')
+                @include('includes.navbar')
                 <!-- End of Topbar -->
 
                 <!-- Begin Page Content -->
-                @yield('dashboard')
+                @yield('content')
                 <!-- /.container-fluid -->
 
             </div>

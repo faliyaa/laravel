@@ -28,7 +28,7 @@ use Illuminate\Http\Request;
 // Route::get('/', function() //buat alamat url
 // {
 //     return view ('welcome'); //nama file di views
-// })-> name('home'); 
+// })-> name('home');
 
 // Route::get('/pendataan', function() {
 //     return view ('pendataan');
@@ -50,5 +50,6 @@ Route::get('/detailpinjam', [DetailPinjamController::class,'index']);
 
 //pelanggan
 Route::get('/pelanggan', [PelangganController::class,'index']);
-Route::post('/tambahpelanggan', [TambahPelangganController::class,'store']);
+Route::get('/tambahpelanggan', [TambahPelangganController::class,'tambahpelanggan']);
+Route::post('/tambahpelanggan', [TambahPelangganController::class,'store'])->name('anggota.store');
 // Route::get('/pelanggan', [PelangganController::class,'pelanggan']);
