@@ -26,7 +26,7 @@
                 <tr>
                     <th scope="row">{{$key + 1}}</th>
                     <td>{{$value->nama}}</td> 
-                    <td>{{ $value->no_hp}}</td>
+                    <td>{{ $value->tempat_lahir}}</td>
                     <td>{{ $value->alamat}}</td>
                     <td class="mr-3">
                         <a href="/pelanggan/{{$value->id}}" class="btn btn-info" >Show </a> 

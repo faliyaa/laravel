@@ -1,16 +1,18 @@
-<ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+<ul class="navbar-nav bg-info sidebar sidebar-dark accordion" id="accordionSidebar">
     <a class="sidebar-brand d-flex align-items-center justify-content-center" href="#">
         <div class="sidebar-brand-icon rotate-n-15">
-            <i class="fas fa-shopping-basket"></i>
+            <i class="fa-solid fa-book-open"></i>
         </div>
-        <div class="sidebar-brand-text mx-3">TOKLINE</div>
+        <div class="sidebar-brand-text mx-3">Perpus</div>
     </a>
     <hr class="sidebar-divider my-0">
     <!-- Nav Item - Dashboard -->
     <li class="nav-item active">
         <a class="nav-link" href="/dashboard">
-            <i class="fas fa-fw fa-tachometer-alt"></i>
-            <span>Dashboard</span>
+            <i class="fa-solid fa-house"></i>
+            <span>Beranda</span>
         </a>
     </li>
     <!-- Divider -->
@@ -18,7 +20,7 @@
     <li class="nav-item active">
         <a class="nav-link" href="/pelanggan">
             <i class="fas fa-fw fa-users"></i>
-            <span>Pelanggan</span>
+            <span>Anggota</span>
         </a>
     </li>
     <!-- Divider -->
@@ -26,8 +28,8 @@
     <!-- Nav Item - Dashboard -->
     <li class="nav-item active">
         <a class="nav-link" href="/barang">
-            <i class="fas fa-fw fa-gift"></i>
-            <span>Barang</span>
+            <i class="fa-solid fa-book"></i>
+            <span>Buku</span>
         </a>
     </li>
     <!-- Divider -->
@@ -36,7 +38,7 @@
     <li class="nav-item active">
         <a class="nav-link" href="/kategori">
             <i class="fas fa-fw fa-th-list"></i>
-            <span>Kategori</span>
+            <span>Pinjam Buku</span>
         </a>
     </li>
     <!-- Divider -->
@@ -44,8 +46,8 @@
     <!-- Nav Item - Dashboard -->
     <li class="nav-item active">
         <a class="nav-link" href="/transaksi">
-            <i class="fas fa-fw fa-credit-card"></i>
-            <span>Transaksi</span>
+            <i class="fa-solid fa-calendar-days"></i>
+            <span>Detail Peminjaman</span>
         </a>
 </li>
 </ul>

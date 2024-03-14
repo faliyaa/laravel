@@ -9,7 +9,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>SB Admin 2 - Dashboard</title>
+    <title>Dashboard</title>
 
     @include('includes.style')
 </head>
@@ -34,7 +34,7 @@
                 <!-- End of Topbar -->
 
                 <!-- Begin Page Content -->
-                @yield('content')
+                @yield('dashboard')
                 <!-- /.container-fluid -->
 
             </div>

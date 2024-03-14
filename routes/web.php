@@ -1,9 +1,13 @@
 <?php
 
 use App\Http\Controllers\AnggotaController;
+use App\Http\Controllers\BukuController;
 use App\Http\Controllers\DashboardController;
+use App\Http\Controllers\DetailPinjamController;
 use App\Http\Controllers\HitungController;
+use App\Http\Controllers\PinjamController;
 use App\Http\Controllers\TestController;
+use App\Http\Controllers\TransaksiController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -35,10 +39,8 @@ use Illuminate\Support\Facades\Route;
 // Route::get('/daftar', [TestController::class, 'daftar']);
 // Route::post('/kirim', [TestController::class, 'kirim']);
 
-
-Route::get('/daftar', [AnggotaController::class, 'index']); // untuk menampilkan tabel anggota
-
 Route::get('/dashboard', [DashboardController::class,'index']);
-
-Route::get('/dashboard', [DashboardController::class, 'index']);
-
+Route::get('/pelanggan', [AnggotaController::class,'index']);
+Route::get('/buku', [BukuController::class,'index']);
+Route::get('/pinjam', [PinjamController::class,'index']);
+Route::get('/detailpinjam', [DetailPinjamController::class,'index']);
