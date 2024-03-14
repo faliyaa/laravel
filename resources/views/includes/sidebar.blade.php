@@ -27,7 +27,7 @@
     <hr class="sidebar-divider my-0">
     <!-- Nav Item - Dashboard -->
     <li class="nav-item active">
-        <a class="nav-link" href="/barang">
+        <a class="nav-link" href="/buku">
             <i class="fa-solid fa-book"></i>
             <span>Buku</span>
         </a>
@@ -36,7 +36,7 @@
     <hr class="sidebar-divider my-0">
     <!-- Nav Item - Dashboard -->
     <li class="nav-item active">
-        <a class="nav-link" href="/kategori">
+        <a class="nav-link" href="/pinjam">
             <i class="fas fa-fw fa-th-list"></i>
             <span>Pinjam Buku</span>
         </a>
@@ -45,7 +45,7 @@
     <hr class="sidebar-divider my-0">
     <!-- Nav Item - Dashboard -->
     <li class="nav-item active">
-        <a class="nav-link" href="/transaksi">
+        <a class="nav-link" href="/detailpinjam">
             <i class="fa-solid fa-calendar-days"></i>
             <span>Detail Peminjaman</span>
         </a>
