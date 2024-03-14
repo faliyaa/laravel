@@ -13,7 +13,6 @@ return new class extends Migration
     {
         Schema::create('pinjambuku', function (Blueprint $table) {
             $table->id();
-            $table->string('nama_kategori');
             $table->timestamps();
         });
     }
@@ -23,6 +22,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('pinjam buku');
+        Schema::dropIfExists('pinjambuku');
     }
 };

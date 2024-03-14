@@ -5,10 +5,14 @@ use App\Http\Controllers\BukuController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\DetailPinjamController;
 use App\Http\Controllers\HitungController;
+use App\Http\Controllers\PelangganController;
 use App\Http\Controllers\PinjamController;
+use App\Http\Controllers\TambahPelangganController;
 use App\Http\Controllers\TestController;
 use App\Http\Controllers\TransaksiController;
 use Illuminate\Support\Facades\Route;
+use Illuminate\Http\Request;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -40,7 +44,11 @@ use Illuminate\Support\Facades\Route;
 // Route::post('/kirim', [TestController::class, 'kirim']);
 
 Route::get('/dashboard', [DashboardController::class,'index']);
-Route::get('/pelanggan', [AnggotaController::class,'index']);
 Route::get('/buku', [BukuController::class,'index']);
 Route::get('/pinjam', [PinjamController::class,'index']);
 Route::get('/detailpinjam', [DetailPinjamController::class,'index']);
+
+//pelanggan
+Route::get('/pelanggan', [PelangganController::class,'index']);
+Route::post('/tambahpelanggan', [TambahPelangganController::class,'store']);
+// Route::get('/pelanggan', [PelangganController::class,'pelanggan']);

@@ -11,13 +11,8 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('buku', function (Blueprint $table) {
+        Schema::create('profile', function (Blueprint $table) {
             $table->id();
-            $table->integer('Kode Buku');
-            $table->string('Jenis Buku');
-            $table->string('Pengarang');
-            $table->string('Penerbit');
-            $table->foreignId('buku_id')->references('id')->on('buku')->onDelete('cascade')->onUpdate('cascade');
             $table->timestamps();
         });
     }
@@ -27,6 +22,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('buku');
+        Schema::dropIfExists('profile');
     }
 };
