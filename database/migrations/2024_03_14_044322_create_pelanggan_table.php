@@ -11,14 +11,10 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('anggota', function (Blueprint $table) {
+        Schema::create('pelanggan', function (Blueprint $table) {
             $table->id();
             $table->string('nama');
-            $table->string('tempat_lahir');
-            $table->datetimes('tanggal_lahir');
-            $table->string('gender');
-            $table->string('alamat');
-            $table->integer('nomorhp');
+            $table->foreignId('profil_id')->references('id')->on('profile')->onDelete('cascade')->onUpdate('cascade');
             $table->timestamps();
         });
     }
@@ -28,6 +24,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('anggota');
+        Schema::dropIfExists('pelanggan');
     }
 };

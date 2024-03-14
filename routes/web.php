@@ -35,10 +35,10 @@ use Illuminate\Support\Facades\Route;
 // Route::get('/daftar', [TestController::class, 'daftar']);
 // Route::post('/kirim', [TestController::class, 'kirim']);
 
-<<<<<<< HEAD
+
 Route::get('/daftar', [AnggotaController::class, 'index']); // untuk menampilkan tabel anggota
 
 Route::get('/dashboard', [DashboardController::class,'index']);
-=======
+
 Route::get('/dashboard', [DashboardController::class, 'index']);
->>>>>>> 773b545298c35d15b7c4ff4b6867b9624f5a8990
+
