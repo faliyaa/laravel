@@ -52,4 +52,7 @@ Route::get('/detailpinjam', [DetailPinjamController::class,'index']);
 Route::get('/pelanggan', [PelangganController::class,'index']);
 Route::get('/tambahpelanggan', [TambahPelangganController::class,'tambahpelanggan']);
 Route::post('/tambahpelanggan', [TambahPelangganController::class,'store'])->name('anggota.store');
+
+Route::delete('/pelanggan/delete/{id}', [PelangganController::class,'delete'])->name('anggota.delete');
+
 // Route::get('/pelanggan', [PelangganController::class,'pelanggan']);
