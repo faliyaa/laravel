@@ -18,6 +18,8 @@ return new class extends Migration
             $table->string('pengarang');
             $table->string('penerbit');
             $table->string('tahun_terbit');
+            $table->string('isbn');
+            $table->string('url_gambar');
             $table->timestamps();
         });
     }

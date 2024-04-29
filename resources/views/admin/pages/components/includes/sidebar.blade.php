@@ -9,16 +9,16 @@
     </a>
     <hr class="sidebar-divider my-0">
     <!-- Nav Item - Dashboard -->
-    <li class="nav-item active">
-        <a class="nav-link" href="/dashboard">
+    <li class="nav-item {{ request()->is('admin/beranda') ? 'active' : '' }}">
+        <a class="nav-link" href="{{ route('admin.beranda') }}">
             <i class="fa-solid fa-house"></i>
             <span>Beranda</span>
         </a>
     </li>
     <!-- Divider -->
-    <hr class="sidebar-divider">
-    <li class="nav-item active">
-        <a class="nav-link" href="/pelanggan">
+    <hr class="sidebar-divider my-0">
+    <li class="nav-item {{ request()->is('admin/anggota') ? 'active' : '' }}">
+        <a class="nav-link" href="{{ route('admin.anggota') }}">
             <i class="fas fa-fw fa-users"></i>
             <span>Anggota</span>
         </a>
@@ -26,8 +26,8 @@
     <!-- Divider -->
     <hr class="sidebar-divider my-0">
     <!-- Nav Item - Dashboard -->
-    <li class="nav-item active">
-        <a class="nav-link" href="/buku">
+    <li class="nav-item {{ request()->is('admin/buku') ? 'active' : '' }}">
+        <a class="nav-link" href="{{ route('admin.buku') }}">
             <i class="fa-solid fa-book"></i>
             <span>Buku</span>
         </a>
@@ -35,8 +35,8 @@
     <!-- Divider -->
     <hr class="sidebar-divider my-0">
     <!-- Nav Item - Dashboard -->
-    <li class="nav-item active">
-        <a class="nav-link" href="/pinjam">
+    <li class="nav-item {{ request()->is('admin/pinjam') ? 'active' : '' }}">
+        <a class="nav-link" href="{{ route('admin.pinjam') }}">
             <i class="fas fa-fw fa-th-list"></i>
             <span>Pinjam Buku</span>
         </a>
@@ -44,10 +44,10 @@
     <!-- Divider -->
     <hr class="sidebar-divider my-0">
     <!-- Nav Item - Dashboard -->
-    <li class="nav-item active">
-        <a class="nav-link" href="/detailpinjam">
+    <li class="nav-item {{ request()->is('admin/detail') ? 'active' : '' }}">
+        <a class="nav-link" href="{{ route('admin.pinjam') }}">
             <i class="fa-solid fa-calendar-days"></i>
             <span>Detail Peminjaman</span>
         </a>
-</li>
+    </li>
 </ul>

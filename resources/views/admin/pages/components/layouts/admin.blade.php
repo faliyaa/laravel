@@ -11,7 +11,7 @@
 
     <title>Dashboard</title>
 
-    @include('includes.style')
+    @include('admin.pages.components.includes.style')
 </head>
 
 <body id="page-top">
@@ -20,7 +20,7 @@
     <div id="wrapper">
 
         <!-- Sidebar -->
-        @include('includes.sidebar')
+        @include('admin.pages.components.includes.sidebar')
         <!-- End of Sidebar -->
 
         <!-- Content Wrapper -->
@@ -30,7 +30,7 @@
             <div id="content">
 
                 <!-- Topbar -->
-                @include('includes.navbar')
+                @include('admin.pages.components.includes.navbar')
                 <!-- End of Topbar -->
 
                 <!-- Begin Page Content -->
@@ -41,7 +41,7 @@
             <!-- End of Main Content -->
 
             <!-- Footer -->
-            @include('includes.footer')
+            @include('admin.pages.components.includes.footer')
             <!-- End of Footer -->
 
         </div>
@@ -76,7 +76,7 @@
     </div>
 
     <!-- Bootstrap core JavaScript-->
-    @include('includes.script')
+    @include('admin.pages.components.includes.script')
 
 </body>
 

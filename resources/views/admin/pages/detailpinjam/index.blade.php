@@ -1,11 +1,11 @@
-@extends('layouts.admin')
+@extends('admin.pages.components.layouts.admin')
 @section('judul', 'DetailPinjam')
 @section('content')
 
 @section('content')
     <div class="p-3">
         {{-- Informasi Peminjaman --}}
-        @foreach ($detail as $peminjaman)       
+        @foreach ($detail as $peminjaman)
             <div class="card">
                 <div class="card-header">
                     Detail Peminjaman
