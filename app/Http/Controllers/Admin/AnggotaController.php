@@ -11,17 +11,20 @@ class AnggotaController extends Controller
 {
     public function index()
     {
+        $showberanda = auth()->user()-> isAdmin();
         $anggotas = Anggota::all();
-        return view('admin.pages.anggota.index', compact('anggotas'));
+        return view('admin.pages.anggota.index', compact('anggotas','showberanda'));
     }
 
     public function show($id) {
+        $showberanda = auth()->user()-> isAdmin();
         $anggotas = Anggota::find($id);
-        return view('admin.pages.anggota.edit', compact('anggotas'));
+        return view('admin.pages.anggota.edit', compact('anggotas', 'showberanda'));
     }
 
     public function create() {
-        return view('admin.pages.anggota.tambah');
+        $showberanda = auth()->user()-> isAdmin();
+        return view('admin.pages.anggota.tambah', compact('showberanda'));
     }
 
     public function store(Request $request) {

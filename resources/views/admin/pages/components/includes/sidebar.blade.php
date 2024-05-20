@@ -8,6 +8,9 @@
         <div class="sidebar-brand-text mx-3">Perpus</div>
     </a>
     <hr class="sidebar-divider my-0">
+
+    
+    
     <!-- Nav Item - Dashboard -->
     <li class="nav-item {{ request()->is('admin/beranda') ? 'active' : '' }}">
         <a class="nav-link" href="{{ route('admin.beranda') }}">
@@ -15,39 +18,46 @@
             <span>Beranda</span>
         </a>
     </li>
-    <!-- Divider -->
-    <hr class="sidebar-divider my-0">
+
+    @if($showberanda)
     <li class="nav-item {{ request()->is('admin/anggota') ? 'active' : '' }}">
         <a class="nav-link" href="{{ route('admin.anggota') }}">
             <i class="fas fa-fw fa-users"></i>
             <span>Anggota</span>
         </a>
     </li>
-    <!-- Divider -->
-    <hr class="sidebar-divider my-0">
-    <!-- Nav Item - Dashboard -->
+    
     <li class="nav-item {{ request()->is('admin/buku') ? 'active' : '' }}">
         <a class="nav-link" href="{{ route('admin.buku') }}">
             <i class="fa-solid fa-book"></i>
             <span>Buku</span>
         </a>
     </li>
-    <!-- Divider -->
-    <hr class="sidebar-divider my-0">
-    <!-- Nav Item - Dashboard -->
+
+
     <li class="nav-item {{ request()->is('admin/pinjam') ? 'active' : '' }}">
         <a class="nav-link" href="{{ route('admin.pinjam') }}">
             <i class="fas fa-fw fa-th-list"></i>
             <span>Pinjam Buku</span>
         </a>
     </li>
-    <!-- Divider -->
-    <hr class="sidebar-divider my-0">
-    <!-- Nav Item - Dashboard -->
+   
     <li class="nav-item {{ request()->is('admin/detail') ? 'active' : '' }}">
         <a class="nav-link" href="{{ route('admin.pinjam') }}">
             <i class="fa-solid fa-calendar-days"></i>
             <span>Detail Peminjaman</span>
         </a>
     </li>
+    @endif
+    <!-- Divider -->
+    <hr class="sidebar-divider my-0">
+    <!-- Divider -->
+    <hr class="sidebar-divider my-0">
+    <!-- Nav Item - Dashboard -->
+    <!-- Divider -->
+    <hr class="sidebar-divider my-0">
+    <!-- Nav Item - Dashboard -->
+    <!-- Divider -->
+    <hr class="sidebar-divider my-0">
+    <!-- Nav Item - Dashboard -->
 </ul>

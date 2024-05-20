@@ -14,53 +14,47 @@ class BukuController extends Controller
 {
     public function index()
     {
+        $showberanda = auth()->user()->isAdmin();
         $buku = Buku::all();
-        return view('admin.pages.buku.index', compact('buku'));
+        return view('admin.pages.buku.index', compact('buku', 'showberanda'));
     }
 
-    public function show($id) {
+    public function show($id)
+    {
+        $showberanda = auth()->user()->isAdmin();
         $buku = Buku::find($id);
-        return view('admin.pages.buku.edit', compact('buku'));
+        return view('admin.pages.buku.edit', compact('buku', 'showberanda'));
     }
 
-    public function create() {
-        return view('admin.pages.buku.tambah');
+    public function create()
+    {
+        $showberanda = auth()->user()->isAdmin();
+        return view('admin.pages.buku.tambah', compact('showberanda'));
     }
 
-    public function store(Request $requests) {
-
-        $data = $requests->except('_token', '_method');
-
-        $requests->validate([
-            'jenis_buku' => 'required|',
-            'judul_buku' => 'required|',
-            'pengarang' => 'required|',
-            'penerbit' => 'required|',
-            'tahun_terbit' => 'required|',
-            'isbn' => 'required|',
+    public function store(Request $request)
+    {
+        $request->validate([
+            'jenis_buku' => 'required',
+            'judul_buku' => 'required',
+            'pengarang' => 'required',
+            'penerbit' => 'required',
+            'tahun_terbit' => 'required',
+            'isbn' => 'required',
             'url_gambar' => 'image|mimes:jpeg,jpg,png',
         ]);
 
+        $data = $request->except('_token');
 
-        $images = $requests->url_gambar;
-        $getNameImages = Str::random(15).$images->getClientOriginalName();
-        $images->storeAs('public/gambarbuku', $getNameImages);
+        if ($request->hasFile('url_gambar')) {
+            $image = $request->file('url_gambar');
+            $imageName = Str::random(15) . '.' . $image->getClientOriginalExtension();
+            $image->storeAs('public/gambarbuku', $imageName);
+            $data['url_gambar'] = $imageName;
+        }
 
-        $data['url_gambar'] = $getNameImages;
         Buku::create($data);
-
-        // Buku::create([
-        //     'jenis_buku' => $requests->jenis_buku,
-        //     'judul_buku' => $requests->judul_buku,
-        //     'pengarang' => $requests->pengarang,
-        //     'penerbit' => $requests->penerbit,
-        //     'tahun_terbit' => $requests->tahun_terbit,
-        //     'url_gambar' => $requests->url_gambar,
-        //     'created_at' => now(),
-        //     'updated_at' =>now()
-        // ]);
 
         return redirect()->route('admin.buku')->with(['berhasil' => 'Data Berhasil Ditambah']);
     }
-
 }

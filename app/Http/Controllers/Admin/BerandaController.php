@@ -11,7 +11,8 @@ class BerandaController extends Controller
 {
     public function index()
     {
+        $showberanda = auth()->user()-> isAdmin();
         $buku = Buku::all();
-        return view('admin.pages.beranda.index', compact('buku'));
+        return view('admin.pages.beranda.index', compact('buku','showberanda'));
     }
 }
