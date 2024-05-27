@@ -1,66 +1,117 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
-
 <p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
+<img align="center" src="http://ForTheBadge.com/images/badges/built-with-love.svg"> <img align="center" src="http://ForTheBadge.com/images/badges/uses-html.svg"> <img align="center" src="http://ForTheBadge.com/images/badges/makes-people-smile.svg"> <img align="center" src="http://ForTheBadge.com/images/badges/built-by-developers.svg">
 </p>
 
-## About Laravel
+# Aplikasi Berbasis Web Data Penjualan dengan Laravel 8
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+Membuat Aplikasi Berbasis Web Data Penjualan Menggunakan Laravel 8, Yang Bertujuan Untuk Presentasi Kepada Tester. Aplikasi Berbasis Web Data Penjualan dengan Laravel 8 adalah aplikasi yang berfungsi untuk melakukan pendataan barang.
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+## Siapa pembuat aplikasi ini?
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+| Profile        |  Keterangan                      |
+|----------------|----------------------------------|
+| Nama           | Bagus Budi Satoto                |
+| Jurusan        | S1 - Informatika                 |
+| Kampus         | Universitas Amikom Yogyakarta    |
 
-## Learning Laravel
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
 
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
+## Desain ERD
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains over 2000 video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+<img src="public/assets_readme/img/Desain_ERD.png" alt="Desain ERD">
 
-## Laravel Sponsors
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the [Laravel Partners program](https://partners.laravel.com).
+## Penjelasan Aplikasi
 
-### Premium Partners
+|<h3>Notes  </h3>       |       Keterangan                                                                  |
+|-----------------------|-----------------------------------------------------------------------------------|
+|<b>Jenis Penjualan     | </b>Digunakan untuk menyimpan data jenis penjualan.                               |
+|<b>Transaksi Penjualan | </b>Digunakan untuk menyimpan data transaksi penjualan. (Master Data Penjualan).  |
+|<b>Barang Penjualan    | </b>Digunakan untuk menyimpan data barang penjualan.                              |
+|<b>Waktu Transaksi     | </b>Digunakan untuk menyimpan data kapan waktu transaksi.                         |
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[WebReinvent](https://webreinvent.com/)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[DevSquad](https://devsquad.com/hire-laravel-developers)**
-- **[Jump24](https://jump24.co.uk)**
-- **[Redberry](https://redberry.international/laravel/)**
-- **[Active Logic](https://activelogic.com)**
-- **[byte5](https://byte5.de)**
-- **[OP.GG](https://op.gg)**
 
-## Contributing
+## Cara Instalasi ke Server Lokal :
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+-   Follow Github Saya
+-   Star Repo Github Saya
+-   Fork Repo Github Saya
+-   Clone project repo saya dengan cara menuliskan pada terminal/cmd/git bash :<br> <b>git clone</b>
+``````
+git clone https://github.com/bagussatoto/Aplikasi-Data-Penjualan-Laravel-8.git
+`````` 
+-   lalu masuk ke direktori repo yg sudah di clone dengan ketik lg pada terminal/cmd/git bash <b>cd aplikasi_data_penjualan</b>
+-   lalu ketik <b>composser install </b> dan <b>php artisan key generate</b>
+-   tulis migrate database pada terminal/cmd/git bash : <b>php artisan migrate:install</b>
+-   jalankan php artisan db:seed pada terminal/cmd/git bash : <b>php artisan db:seed</b>
 
-## Code of Conduct
+<b>Notes :</b> Untuk db:seed jika males untuk mengetikan data, akan dibuatkan langsung oleh laravelnya.
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+## Fitur Aplikasi
 
-## Security Vulnerabilities
+-   Halaman Utama (Halaman Dashboard)<br><br>
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+A. Menu Data Jenis Barang<br>
 
-## License
+-   Tambah Data (Data Jenis Barang)<br>
+-   Ubah Data (Data Jenis Barang)<br>
+-   Hapus Data (Data Jenis Barang)<br>
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+B. Menu Data Master Penjualan<br>
+
+-   Tambah Data (Data Master Penjualan)<br>
+-   Ubah Data (Data Master Penjualan)<br>
+-   Hapus Data (Data Master Penjualan)<br>
+
+C. Menu Data Log Transaksi<br>
+
+-   Reset Data (Data Log Transaksi)<br>
+
+D. Menu Perbandingan Jenis Data
+
+E. Menu Tambahan
+
+-   Pembuat Website
+-   Dokumentasi Singkat
+
+## Alat Yang Digunakan Untuk Membuat Web :
+
+-   WAMP
+-   Visual Studio Code
+-   Git
+-   Cloud (Github)
+-   PHP 7.4.9
+-   MYSQL 8.0.13
+-   Laravel 8
+-   Bootstrap 5
+-   Composer
+
+
+
+## Kritik dan Saran
+
+| *_Silahkan kirim kritik dan saran anda ke email :_*  |
+|------------------------------------------------------|
+| bagusbudi1308@gmail.com                              |
+
+
+## Request Fitur Baru dan Pelaporan Bug
+
+Anda dapat meminta fitur baru maupun melaporkan bug melalui menu **issues** yang sudah disediakan oleh GitHub (lihat menu di atas), posting issues baru dan kita akan berdiskusi disana.
+
+
+## Berkontribusi
+
+Siapapun dapat berkontribusi pada proyek ini mulai dari pemrograman, pembuakan buku manual, sampai dengan mengenalkan produk ini kepada Mahasiswa 
+Untuk belajar agar mengurangi kesenjangan pendidikan teknologi dengan cara membuat postingan issue di repository ini.
+
+<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400"></a></p>
+
+<p align="center">
+<a href="https://travis-ci.org/laravel/framework"><img src="https://travis-ci.org/laravel/framework.svg" alt="Build Status"></a>
+<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
+<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
+</p>
+
+
+
