@@ -42,7 +42,7 @@ Membuat aplikasi berbasis web data perpustakaan menggunakan Laravel 10. Aplikasi
 -   Composer dan NodeJS
 -   Laravel 10
 -   Laravel Ui
--   Template Landing Page: 
+-   Template Landing Page: https://www.free-css.com/free-css-templates
 
 
 ## Kritik dan Saran
