@@ -69,13 +69,13 @@
                 <div class="alert alert-danger">{{ $message }}</div>
             @enderror
         </div>
-
+        {{-- class="form-control-file" id="url" name="url_gambar" --}}
         <div class="form-group p-3">
             <label for="url">File Gambar</label>
-            <input type="file" class="form-control-file" id="url" name="url_gambar">
-            @error('url_gambar')
+            <input type="file" name="filename" required class="form-control">
+            {{-- @error('url_gambar')
                 <div class="alert alert-danger">{{ $message }}</div>
-            @enderror
+            @enderror --}}
         </div>
 
         <div class="p-3">

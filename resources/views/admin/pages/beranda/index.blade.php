@@ -23,7 +23,8 @@
                         </div>
                         <div class="card-body">
                             <div class="text-center" style="padding-bottom: 40px">
-                                <img src="{{ asset('storage/gambarbuku/' . $key->url_gambar) }}" class="img-fluid"
+                                <img src="storage/{{ $key->url_gambar }}" class="img-fluid"
+                                {{-- {{ asset('storage/gambarbuku/' . $key->url_gambar) }} --}}
                                     style="width: 150px; height: 200px; border-radius: 4px;
                                     box-shadow: 8px 8px 4px;"
                                     alt="Buku 1">
